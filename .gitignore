@@ -5,7 +5,7 @@
 .idea
 *.iml
 /bin/
-out/artifacts/Arsenal/Finale.jar
+out/artifacts/Arsenal/Arsenal.jar
 out/artifacts/Arsenal/.DS_Store
 out/artifacts/.DS_Store
 out/.DS_Store
