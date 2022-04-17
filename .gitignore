@@ -1,0 +1,14 @@
+/target/
+.classpath
+.settings/**
+.project
+.idea
+*.iml
+/bin/
+out/artifacts/Arsenal/Finale.jar
+out/artifacts/Arsenal/.DS_Store
+out/artifacts/.DS_Store
+out/.DS_Store
+.DS_Store
+.gradle
+build
