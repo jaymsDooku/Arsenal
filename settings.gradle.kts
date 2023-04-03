@@ -1,8 +1,12 @@
-rootProject.name = "Arsenal"
-
 pluginManagement {
     repositories {
         gradlePluginPortal()
+        maven("https://repo.civmc.net/repository/maven-public/")
         maven("https://papermc.io/repo/repository/maven-public/")
     }
 }
+
+rootProject.name = "arsenal"
+
+include(":paper")
+project(":paper").name = rootProject.name + "-paper"

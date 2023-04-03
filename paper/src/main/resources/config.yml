@@ -1,0 +1,92 @@
+database:
+  ==: vg.civcraft.mc.civmodcore.dao.DatabaseCredentials
+  plugin: Arsenal
+  user: 'mc_arsenal'
+  password: 'minecraft'
+  host: localhost
+  port: 3306
+  database: arsenal
+  poolsize: 5
+  connection_timeout: 10000
+  idle_timeout: 600000
+  max_lifetime: 7200000
+artillery:
+  types:
+    field-artillery:
+      id: 1
+      display-name: Field Artillery
+      blueprint-name: field-artillery
+      clazz-name: dev.jayms.arsenal.artillery.impl.field.FieldArtillery
+      ammo:
+        type: COAL
+        consumption-amount: 1
+      cooldown: 5000
+      max-health: 100
+      defence-range: 20
+      artillery-damage-default: 1
+      artillery-damage:
+        field-artillery: 1
+        trebuchet: 1
+        katyusha: 1
+      config:
+        impact:
+          radius: 4
+          reinforcement-damage: 5
+          bastion-damage: 5
+          player-damage: 5
+          knockback:
+            horizontal: 1
+            vertical: 1
+    trebuchet:
+      id: 2
+      display-name: Trebuchet
+      blueprint-name: trebuchet
+      clazz-name: dev.jayms.arsenal.artillery.impl.trebuchet.Trebuchet
+      ammo:
+        type: COAL
+        consumption-amount: 1
+      cooldown: 5000
+      max-health: 100
+      defence-range: 20
+      artillery-damage-default: 1
+      artillery-damage:
+        field-artillery: 1
+        trebuchet: 1
+        katyusha: 1
+      config:
+        impact:
+          radius: 4
+          reinforcement-damage: 5
+          bastion-damage: 5
+          player-damage: 5
+          knockback:
+            horizontal: 1
+            vertical: 1
+    katyusha:
+      id: 3
+      display-name: Katyusha
+      blueprint-name: katyusha
+      clazz-name: dev.jayms.arsenal.artillery.impl.rocket.RocketArtillery
+      ammo:
+        type: COAL
+        consumption-amount: 1
+      cooldown: 5000
+      max-health: 100
+      defence-range: 20
+      artillery-damage-default: 1
+      artillery-damage:
+        field-artillery: 1
+        trebuchet: 1
+        katyusha: 1
+      config:
+        impact:
+          radius: 4
+          reinforcement-damage: 5
+          bastion-damage: 5
+          player-damage: 5
+          knockback:
+            horizontal: 1
+            vertical: 1
+
+
+

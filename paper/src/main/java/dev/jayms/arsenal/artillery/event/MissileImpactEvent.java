@@ -1,0 +1,46 @@
+package dev.jayms.arsenal.artillery.event;
+
+import dev.jayms.arsenal.artillery.ArtilleryMissile;
+import org.bukkit.Location;
+import org.bukkit.block.Block;
+import org.bukkit.event.Event;
+import org.bukkit.event.HandlerList;
+
+import java.util.List;
+
+public class MissileImpactEvent extends Event {
+
+    private static final HandlerList handlers = new HandlerList();
+
+    private final ArtilleryMissile missile;
+    private List<Location> explodeLocations;
+    private List<Block> explodeBlocks;
+
+    public MissileImpactEvent(ArtilleryMissile missile, List<Location> explodeLocations, List<Block> explodeBlocks) {
+        this.missile = missile;
+        this.explodeLocations = explodeLocations;
+        this.explodeBlocks = explodeBlocks;
+    }
+
+    public ArtilleryMissile getMissile() {
+        return missile;
+    }
+
+    public List<Location> getExplodeLocations() {
+        return explodeLocations;
+    }
+
+    public List<Block> getExplodeBlocks() {
+        return explodeBlocks;
+    }
+
+    @Override
+    public HandlerList getHandlers() {
+        return handlers;
+    }
+
+    public static HandlerList getHandlerList() {
+        return handlers;
+    }
+
+}
