@@ -115,7 +115,7 @@ public class GenericMissileFinishState<T extends GenericMissile> implements Arti
             le.damage(artillery.getPlayerDamage());
         }
 
-        MissileImpactEvent missileImpactEvent = new MissileImpactEvent(missile, explodeLocs, explodeBlocks);
+        MissileImpactEvent missileImpactEvent = new MissileImpactEvent(missile, missile.getShooter(), explodeLocs, explodeBlocks);
         Bukkit.getPluginManager().callEvent(missileImpactEvent);
         return this;
     }
